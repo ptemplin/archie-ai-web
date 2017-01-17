@@ -1,0 +1,1 @@
+POST /api/recognize                   asr.controllers.RecognitionController.recognize
