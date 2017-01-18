@@ -7,9 +7,11 @@ lazy val SpeechRecognitionService = project in file("modules/SpeechRecognitionSe
 
 lazy val VoiceBuilderService = project in file("modules/VoiceBuilderService")
 
+lazy val NLUService = project in file("modules/NLUService")
+
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
-  .dependsOn(SpeechRecognitionService, VoiceBuilderService)
-  .aggregate(SpeechRecognitionService, VoiceBuilderService)
+  .dependsOn(SpeechRecognitionService, VoiceBuilderService, NLUService)
+  .aggregate(SpeechRecognitionService, VoiceBuilderService, NLUService)
 
 scalaVersion := "2.11.8"
 

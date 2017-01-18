@@ -15,10 +15,6 @@ import java.nio.ByteBuffer;
  */
 public class RecognitionGateway {
 
-    private static final int numChannels = 1;
-    private static final int sampleRate = 48000;
-    private static final int sampleSize = 16;
-
     private final StreamSpeechRecognizer recognizer;
 
     public RecognitionGateway() throws IOException {

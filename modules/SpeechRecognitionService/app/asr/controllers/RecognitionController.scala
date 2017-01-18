@@ -21,10 +21,9 @@ class RecognitionController @Inject() extends Controller {
     * a path of `/`.
     */
   def recognize = Action { implicit request =>
-    val recognizer: RecognitionGateway = new RecognitionGateway
-    val body: AnyContent = request.body
-    val bodyRaw: RawBuffer = body.asRaw.orNull
-    val bodyBytes: ByteBuffer = bodyRaw.asBytes(500000).orNull.asByteBuffer
+    val recognizer = new RecognitionGateway
+    val rawBody = request.body.asRaw.orNull
+    val bodyBytes = rawBody.asBytes(500000).orNull.asByteBuffer
     Ok(recognizer.recognize(bodyBytes))
   }
 }

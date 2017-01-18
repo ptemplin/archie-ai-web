@@ -1,0 +1,1 @@
+GET /api/getIntent      nlu.controllers.NLUController.getIntent

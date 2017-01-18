@@ -4,10 +4,13 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET     /                               controllers.ArchieController.index
+GET     /api/getSpeechPlayback          controllers.ArchieController.getSpeechPlayback
+POST    /api/getActionFromSpeech        controllers.ArchieController.getActionFromSpeech
 
 ->      /asr asr.Routes
 ->      /tts tts.Routes
+->      /nlu nlu.Routes
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
