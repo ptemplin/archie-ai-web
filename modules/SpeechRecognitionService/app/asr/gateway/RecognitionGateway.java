@@ -24,8 +24,8 @@ public class RecognitionGateway {
 
         // Load model from the jar
         configuration.setAcousticModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us");
-        configuration.setDictionaryPath("resource:/edu/cmu/sphinx/models/en-us/cmudict-en-us.dict");
-        configuration.setLanguageModelPath("resource:/edu/cmu/sphinx/models/en-us/en-us.lm.bin");
+        configuration.setDictionaryPath("resource:/langmodel/archie_v1.dic");
+        configuration.setLanguageModelPath("resource:/langmodel/archie_v1.lm");
 
         recognizer = new StreamSpeechRecognizer(configuration);
     }

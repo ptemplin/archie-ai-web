@@ -6,38 +6,41 @@ package nlu.intent
 class IntentRecognizer {
 
   val timeActions = Set(
-    "what time is it",
-    "what's the time",
-    "what is the time",
-    "give me the time",
-    "the time",
-    "time")
+    "WHAT TIME IS IT",
+    "WHAT'S THE TIME",
+    "WHAT IS THE TIME",
+    "GIVE ME THE TIME",
+    "THE TIME",
+    "TIME")
 
   val greetingActions = Set(
-    "hi",
-    "hello",
-    "hey",
-    "howdy",
-    "greetings"
+    "HI",
+    "HI ARCHIE",
+    "HELLO",
+    "HELLO ARCHIE",
+    "HEY",
+    "HEY ARCHIE",
+    "HOWDY",
+    "GREETINGS"
   )
 
   val smalltalkActions = Set(
-    "how are you",
-    "how are you today",
-    "how is it going",
-    "how are you doing",
-    "how's it going",
-    "how do you feel"
+    "HOW ARE YOU",
+    "HOW ARE YOU TODAY",
+    "HOW IS IT GOING",
+    "HOW ARE YOU DOING",
+    "HOW'S IT GOING",
+    "HOW DO YOU FEEL"
   )
 
   val musicActions = Set(
-    "play some music",
-    "play music",
-    "play a song",
-    "play",
-    "sing",
-    "sing a song",
-    "sing me a song"
+    "PLAY SOME MUSIC",
+    "PLAY MUSIC",
+    "PLAY A SONG",
+    "PLAY",
+    "SING",
+    "SING A SONG",
+    "SING ME A SONG"
   )
 
   def getIntent(input: String) : String = {
